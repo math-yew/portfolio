@@ -229,6 +229,12 @@ fieldset[disabled] .btn-xl.active {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.login {
+  font-size: 25px;
+  color: red;
+}
+
 @media (min-width: 768px) {
   .navbar-custom {
     background-color: transparent;
