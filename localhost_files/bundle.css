@@ -1,0 +1,336 @@
+@font-face {
+  font-family: Muli;
+  src: url("../app/css/fonts/muli/Muli-Light.ttf"); }
+
+@font-face {
+  font-family: Ovo;
+  src: url("../app/css/fonts/ovo/Ovo-Regular.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: Cardo;
+  src: url("../app/css/fonts/cardo/Cardo-Bold.ttf"); }
+
+@font-face {
+  font-family: Josefinsans;
+  src: url("../app/css/fonts/josefinsans/Josefinsans-Regular.ttf"); }
+
+@font-face {
+  font-family: Indie_Flower;
+  src: url("../app/css/fonts/Indie_Flower/IndieFlower.ttf"); }
+
+@font-face {
+  font-family: Love_Ya_Like_A_Sister;
+  src: url("../app/css/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister.ttf"); }
+
+body {
+  margin: 0;
+  font-family: Muli; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+.input-style, button {
+  font-family: Josefinsans;
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px;
+  color: white;
+  text-shadow: 1px 1px 3px darkgreen;
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer; }
+
+.input-style:hover, button:hover {
+  color: darkgreen;
+  text-shadow: none;
+  background-color: lightgreen; }
+
+input {
+  text-align: center;
+  font-size: 15px; }
+
+.basic, .page, .search-recipes, .edit-recipes {
+  padding: 5px;
+  margin: 5px; }
+
+.shadow, .page, .meal-plan {
+  box-shadow: 10px 10px 5px gray; }
+
+.book {
+  width: 70%;
+  position: relative;
+  float: left;
+  transition: 3s;
+  display: inline-block;
+  text-align: center; }
+
+.flip, .page {
+  transform-origin: left;
+  transition: 5s; }
+
+.page {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-style: solid;
+  text-align: center;
+  border-color: #b7b7b7;
+  border-left-color: #969696;
+  overflow-y: scroll;
+  background: #b7b7b7;
+  background: -moz-linear-gradient(left, #b7b7b7 0%, #e8e8e8 7%, white 29%, white 66%, #ededed 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #b7b7b7), color-stop(7%, #e8e8e8), color-stop(29%, white), color-stop(66%, white), color-stop(100%, #ededed));
+  background: -webkit-linear-gradient(left, #b7b7b7 0%, #e8e8e8 7%, white 29%, white 66%, #ededed 100%);
+  background: -o-linear-gradient(left, #b7b7b7 0%, #e8e8e8 7%, white 29%, white 66%, #ededed 100%);
+  background: -ms-linear-gradient(left, #b7b7b7 0%, #e8e8e8 7%, white 29%, white 66%, #ededed 100%);
+  background: linear-gradient(to right, #b7b7b7 0%, #e8e8e8 7%, white 29%, white 66%, #ededed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7b7b7', endColorstr='#ededed',GradientType=1 ); }
+
+.get {
+  z-index: 10; }
+
+.search-recipes, .edit-recipes {
+  background-color: white;
+  width: 80%;
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: text-top;
+  border-color: grey;
+  font-size: 20px; }
+
+.edit-recipes {
+  background-color: #ffffd2;
+  border-style: solid; }
+
+.right-side {
+  width: 20%;
+  position: relative;
+  float: left;
+  margin: 0 0 0 76%;
+  transition: 1.5s; }
+
+.meal-plan {
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-width: thin;
+  border-color: grey;
+  min-height: 100px;
+  border-radius: 3px;
+  position: relative;
+  text-align: center; }
+
+.add-button {
+  z-index: 11;
+  float: right; }
+
+.home-container {
+  width: 150%;
+  height: 100%;
+  position: fixed;
+  left: -25%; }
+
+.welcome-screen, .grass, .blurred, .fridge, .counter, .chandelier, .home-top {
+  width: 150%;
+  height: 150%;
+  margin-top: -10%;
+  margin-left: -25%;
+  background-attachment: fixed;
+  position: absolute;
+  background-position: center;
+  display: inline-block;
+  transition: 3.5s; }
+
+.grass {
+  background: url("../app/css/images/grass.png") center center no-repeat;
+  z-index: 1; }
+
+.blurred {
+  background: url("../app/css/images/blurred.png") center center no-repeat;
+  z-index: 2; }
+
+.fridge {
+  background: url("../app/css/images/fridge.png") center center no-repeat;
+  z-index: 3; }
+
+.counter {
+  background: url("../app/css/images/counter.png") center center no-repeat;
+  z-index: 4;
+  margin-left: -22%; }
+
+.chandelier {
+  background: url("../app/css/images/chandelier.png") center center no-repeat;
+  z-index: 5; }
+
+.home-top {
+  z-index: 6; }
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute; }
+
+.title {
+  font-family: Josefinsans;
+  font-size: 125px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000; }
+
+.triangle, .tri-a, .tri-b {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 125%;
+  border-top: 150px solid transparent;
+  border-left: 55px solid;
+  border-bottom: 150px solid transparent;
+  z-index: 20;
+  width: 0px;
+  height: 0px;
+  transition: 2s; }
+
+.tri-a {
+  border-left-color: red;
+  transition: 2s; }
+
+.tri-b {
+  border-left-color: blue;
+  transition: 2s; }
+
+.items {
+  background-color: skyblue;
+  margin: 5px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px; }
+
+.grocery {
+  width: 100%;
+  height: 100vh;
+  text-align: center; }
+
+.cat {
+  border: solid thin darkgrey;
+  padding: 0px;
+  display: inline-block;
+  margin: 5px;
+  width: 210px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  background-color: #ebebeb;
+  vertical-align: text-top; }
+
+.hand-title {
+  font-family: Love_Ya_Like_A_Sister;
+  font-size: 30px; }
+
+.hand {
+  font-family: Indie_Flower; }
+
+.paper {
+  border-bottom: solid thin skyblue;
+  margin: 0px;
+  padding: 0px; }
+
+.notepad-button {
+  margin: 10px 0; }
+
+.user-info {
+  width: 100%;
+  text-align: right;
+  font-size: 12px; }
+
+.book-cover {
+  width: 105%;
+  height: 93vh;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: lightgreen;
+  color: darkgreen;
+  margin: 0 auto;
+  z-index: 16;
+  transform-origin: left;
+  transition: 3s;
+  border-radius: 5px 15px 15px 5px;
+  border: solid thin grey;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer; }
+
+.centered {
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  line-height: 130px;
+  white-space: nowrap;
+  font-size: 50px;
+  font-family: Cardo; }
+
+.boxed {
+  border: solid thin;
+  box-shadow: 0px 0px 5px 5px #00ca00;
+  padding: 0 10px;
+  background-color: #d2f8d2; }
+
+.print {
+  position: fixed;
+  bottom: 5%;
+  right: 10%; }
+
+.new-page {
+  transform: rotate(-5deg) scale(0.91, 0.91);
+  transform-origin: 50% 50%;
+  transition: 3s;
+  z-index: 0; }
+
+.directions {
+  height: 150px;
+  width: 400px;
+  text-align: left;
+  display: inline-block;
+  font-size: 15px; }
+
+.clear {
+  float: left; }
+
+.text-left {
+  text-align: left;
+  margin-left: 15px; }
+
+.pointer {
+  cursor: pointer; }
+
+@media (max-width: 900px) {
+  .triangle, .tri-a, .tri-b {
+    left: 84%; }
+  .book {
+    width: 85%; }
+  .right-side {
+    width: 300px;
+    margin: 0 0 0 90%; }
+  input {
+    width: 80%; }
+  .directions {
+    width: 80%; }
+  .centered {
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    height: 80%;
+    line-height: 100px;
+    white-space: nowrap;
+    font-size: 20px;
+    font-family: Cardo; }
+  .clear {
+    float: none;
+    clear: both; } }

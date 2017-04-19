@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:3000/#!/recipes -->
+<html ng-app="meals" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title></title>
+    <link rel="stylesheet" href="./localhost_files/bundle.css">
+  <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+  <body ng-controller="ctrl" class="ng-scope">
+    <!-- <h1>MAIN PAGE</h1>
+    {{test}} -->
+    <!-- uiView: --><ui-view class="ng-scope"><div class="user-info ng-scope">
+  <p class="ng-binding">Logged In As: guest@guest.com</p>
+</div>
+
+<div class="book ng-scope" rec-ani="">
+  <div class="book-cover pointer shadow cat" ng-click="getRecipes()">
+    <div class="centered">
+      <br>
+      <h1 class="boxed">My Recipes</h1>
+      <p><span style="font-size:30px">(Click to Open)</span></p>
+    </div>
+  </div>
+  <div class="page get">
+    <h1>Recipes</h1>
+    <!-- <button ng-click="getRecipes()">Get Recipes</button> -->
+    <!-- ngRepeat: eachRecipe in allRecipes -->
+  </div>
+
+  <div class="page new-page">
+    <p style="text-align: right" class="new-page-corner pointer">Add Recipe</p>
+    <edit-recipe class="ng-isolate-scope"><br><br>
+<div class="edit-recipes">
+  <!-- <button type="button" ng-click="$ctrl.refreshIt()">test</button> -->
+  <input style="font-size:30px" type="text" ng-model="$ctrl.newRecipe.rname" placeholder="Recipe Name" class="ng-pristine ng-untouched ng-valid ng-empty">
+  <h3>Ingredients:</h3>
+  <!-- ngRepeat: ingredients in $ctrl.ingredientsList -->
+
+  <form class="ng-pristine ng-valid">
+    <input type="text" ng-model="$ctrl.ingredient.qty" placeholder="QTY" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <input type="text" ng-model="$ctrl.ingredient.measurement" placeholder="Measurement" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <input type="text" ng-model="$ctrl.ingredient.name" placeholder="Ingredient" class="ng-pristine ng-untouched ng-valid ng-empty"><br>
+    <button ng-click="$ctrl.addIngredient($ctrl.ingredient)">Add</button>
+  </form>
+
+  <h3>Directions:</h3>
+  <textarea class="directions ng-pristine ng-untouched ng-valid ng-empty" type="text" ng-model="$ctrl.newRecipe.directions" placeholder="Directions"></textarea><br>
+<br>
+  <button ng-click="$ctrl.submitRecipe($ctrl.newRecipe)" ng-hide="$ctrl.update">Submit</button>
+  <button ng-click="$ctrl.updateRecipe($ctrl.newRecipe)" ng-show="$ctrl.update" class="ng-hide">Update</button>
+  <button type="button" ng-click="$ctrl.deleteRecipe($ctrl.certainRecipe[0].recipe_id)" ng-show="$ctrl.update" class="ng-hide">Delete Recipe</button>
+  <button id="cancel-edit" ng-click="$ctrl.getRecipes()" ng-hide="$ctrl.update">Done</button>
+</div>
+</edit-recipe>
+  </div>
+
+  <div class="page">
+    <button type="button" id="go-back" name="button" ng-show="flipped">Go Back</button>
+    <button type="button" name="button" ng-click="flipped = !flipped" ng-show="flipped">Edit</button>
+    <button type="button" name="button" ng-click="flipped = !flipped" ng-hide="flipped" class="ng-hide">Go Back</button>
+    <single-recipe certain-recipe="certainRecipe" ng-show="flipped" class="ng-isolate-scope"><br>
+<div class="search-recipes ng-binding" style="border-style: solid;">
+  <h1 class="ng-binding"></h1>
+  <h3>Ingredients:</h3>
+  <!-- ngRepeat: ingredient in $ctrl.certainRecipe -->
+  <h3>Directions:</h3>
+  <br>
+</div>
+</single-recipe>
+    <edit-recipe update="true" certain-recipe="certainRecipe" ng-hide="flipped" class="ng-isolate-scope ng-hide"><br><br>
+<div class="edit-recipes">
+  <!-- <button type="button" ng-click="$ctrl.refreshIt()">test</button> -->
+  <input style="font-size:30px" type="text" ng-model="$ctrl.newRecipe.rname" placeholder="Recipe Name" class="ng-pristine ng-untouched ng-valid ng-empty">
+  <h3>Ingredients:</h3>
+  <!-- ngRepeat: ingredients in $ctrl.ingredientsList -->
+
+  <form class="ng-pristine ng-valid">
+    <input type="text" ng-model="$ctrl.ingredient.qty" placeholder="QTY" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <input type="text" ng-model="$ctrl.ingredient.measurement" placeholder="Measurement" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <input type="text" ng-model="$ctrl.ingredient.name" placeholder="Ingredient" class="ng-pristine ng-untouched ng-valid ng-empty"><br>
+    <button ng-click="$ctrl.addIngredient($ctrl.ingredient)">Add</button>
+  </form>
+
+  <h3>Directions:</h3>
+  <textarea class="directions ng-pristine ng-untouched ng-valid ng-empty" type="text" ng-model="$ctrl.newRecipe.directions" placeholder="Directions"></textarea><br>
+<br>
+  <button ng-click="$ctrl.submitRecipe($ctrl.newRecipe)" ng-hide="$ctrl.update" class="ng-hide">Submit</button>
+  <button ng-click="$ctrl.updateRecipe($ctrl.newRecipe)" ng-show="$ctrl.update">Update</button>
+  <button type="button" ng-click="$ctrl.deleteRecipe($ctrl.certainRecipe[0].recipe_id)" ng-show="$ctrl.update">Delete Recipe</button>
+  <button id="cancel-edit" ng-click="$ctrl.getRecipes()" ng-hide="$ctrl.update" class="ng-hide">Done</button>
+</div>
+</edit-recipe>
+  </div>
+</div>
+
+<div class="right-side ng-scope" rec-ani="">
+  <meal-plan meal-list="mealList" class="ng-isolate-scope">
+<div class="meal-plan" rec-ani="">
+<h3 class="hand-title">Meal Plan</h3>
+<input type="text" placeholder="Untitled List" ng-model="$ctrl.listTitle" class="ng-pristine ng-untouched ng-valid ng-empty">
+<!-- ngRepeat: meal in $ctrl.mealList -->
+  <button class="notepad-button" type="button" ng-click="$ctrl.makeList($ctrl.mealList, $ctrl.listTitle)"> Make Grocery List</button>
+</div>
+</meal-plan>
+</div>
+
+<div class="tri-a ng-scope"></div>
+<div class="tri-b ng-scope"></div>
+</ui-view>
+
+
+    <script src="./localhost_files/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="./localhost_files/angular.js"></script>
+  <script src="./localhost_files/angular-ui-router.js"></script>
+  <!-- <script src="./app.js"></script>
+  <script src="./ctrl.js"></script>
+  <script src="./service.js"></script>
+  <script src="./app/routes/grocery/groceryCtrl.js"></script>
+  <script src="./app/routes/welcome/welcomeCtrl.js"></script>
+  <script src="./app/routes/recipes/recipesCtrl.js"></script>
+  <script src="./app/routes/home/homeCtrl.js"></script>
+  <script src="./app/components/recipesComp.js"></script> -->
+  <script src="./localhost_files/bundle.js"></script>
+  
+
+</body></html>
